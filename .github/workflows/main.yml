@@ -53,6 +53,7 @@ jobs:
 
       - name: Run a build command
         uses: dawidd6/action-ansible-playbook@v2
+        if: ${{ github.event.pull_request.merged == true }}
         with:
           playbook: .ansible/main.yml
           key: ${{ secrets.SSH_PRIVATE_KEY }}
