@@ -1,0 +1,21 @@
+{
+    "parserOptions": {
+        "ecmaVersion": 2020
+    },
+    "env": {
+        "browser": true,
+        "amd": true,
+        "jquery": true
+    },
+    "extends": ["plugin:prettier/recommended"],
+    "plugins": ["prettier"],
+    "rules": {
+        "no-console": "error",
+        "no-debugger": "error",
+        "no-var": "error",
+        "no-undefined": "error",
+        "no-unused-vars": "error",
+        "newline-before-return": "error",
+        "newline-after-var": "error"
+    }
+}

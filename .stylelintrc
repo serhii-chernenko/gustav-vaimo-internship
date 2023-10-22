@@ -1,0 +1,16 @@
+{
+    "extends": ["stylelint-config-standard"],
+    "customSyntax": "postcss-less",
+    "rules": {
+        "unit-allowed-list": [
+            "px",
+            "rem",
+            "%",
+            "s",
+            "fr",
+            "vh",
+            "vw",
+            "deg"
+        ]
+    }
+}

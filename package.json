@@ -1,0 +1,26 @@
+{
+  "name": "gustav-vaimo-internship",
+  "author": "serhii-chernenko",
+  "description": "CI/CD repo to deploy and run tests for a new theme of Magento 2",
+  "scripts": {
+    "format": "prettier --write ./**/*.js",
+    "eslint": "eslint ./**/*.js",
+    "eslint:fix": "eslint --fix ./**/*.js",
+    "stylelint": "stylelint ./**/*.{less,css}",
+    "stylelint:fix": "stylelint --fix ./**/*.{less,css}",
+    "fix": "npm run eslint:fix && npm run format && npm run stylelint:fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:serhii-chernenko/gustav-vaimo-internship.git"
+  },
+  "devDependencies": {
+    "eslint": "^8.17.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "postcss-less": "^6.0.0",
+    "prettier": "^2.7.1",
+    "stylelint": "^15.11.0",
+    "stylelint-config-standard": "^34.0.0"
+  }
+}

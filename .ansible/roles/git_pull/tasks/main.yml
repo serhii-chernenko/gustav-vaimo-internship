@@ -1,0 +1,7 @@
+- name: Update the repo of Gustav theme on VPS
+  git:
+    repo: "git@github.com:{{ GITHUB_REPO }}.git"
+    dest: "{{ dir }}/app/design/frontend/VaimoInternship/gustav"
+    single_branch: true
+    version: main
+    accept_newhostkey: true

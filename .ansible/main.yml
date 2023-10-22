@@ -1,0 +1,20 @@
+- name: Deploy the Chernenko_Tables module on VPS
+  hosts: all
+  remote_user: inevix
+  vars:
+    user_home_path: "/home/{{ ansible_user }}"
+    dir: "{{ user_home_path }}/vaimo/internship/gustav"
+    log_file: "{{ dir }}/var/log/build.txt"
+    m2: "madock magento"
+    build_commands:
+      - maintenance:enable
+      - setup:upgrade
+      - setup:di:compile
+      - setup:static-content:deploy
+      - cache:flush
+      - maintenance:disable
+  environment:
+    PATH: "{{ user_home_path }}/tools/madock:{{ ansible_env.PATH }}"
+  roles:
+    - git_pull
+    - magento_build

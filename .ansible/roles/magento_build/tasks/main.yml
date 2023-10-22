@@ -1,0 +1,26 @@
+- name: Clear log file
+  file:
+    path: "{{ log_file }}"
+    state: absent
+
+- name: Recreate log file
+  file:
+    path: "{{ log_file }}"
+    state: touch
+    mode: '0666'
+
+- name: Run Magento 2 build commands and log output
+  block:
+    - name: Run build command
+      shell:
+        cmd: "{{ m2 }} {{ item }}"
+        chdir: "{{ dir }}"
+      register: cmd_output
+      loop: "{{ build_commands }}"
+
+    - name: Copy output to log file
+      copy:
+        content: "{{ cmd_output.results | map(attribute='stdout') | join('\n') }}\n"
+        dest: "{{ log_file }}"
+        remote_src: yes
+        mode: '0666'
