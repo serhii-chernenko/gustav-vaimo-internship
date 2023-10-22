@@ -23,11 +23,13 @@ jobs:
       - name: Check for JS files
         run: |
           countjs=$(find . -name '*.js' | wc -l)
+          echo "Number of .js files: $countjs"
           echo "HAS_JS_FILES=$(( countjs > 0 ))" >> $GITHUB_ENV
 
       - name: Check for LESS and CSS files
         run: |
           countstyles=$(find . -name '*.less' -o -name '*.css' | wc -l)
+          echo "Number of .less and .css files: $countstyles"
           echo "HAS_STYLES_FILES=$(( countstyles > 0 ))" >> $GITHUB_ENV
 
       - name: Use Node.js ${{ matrix.node-version }}
