@@ -37,23 +37,23 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
-        if: ${{ env.HAS_JS_FILES == '1' || env.HAS_STYLES_FILES == '1' }}
+        if: env.HAS_JS_FILES == '1' || env.HAS_STYLES_FILES == '1'
 
       - name: Install dependencies from package-lock.json
         run: npm ci
-        if: ${{ env.HAS_JS_FILES == '1' || env.HAS_STYLES_FILES == '1' }}
+        if: env.HAS_JS_FILES == '1' || env.HAS_STYLES_FILES == '1'
 
       - name: Run ESLint
         run: npm run eslint --if-present
-        if: ${{ env.HAS_JS_FILES == '1' }}
+        if: env.HAS_JS_FILES == '1'
 
       - name: Run Stylelint
         run: npm run stylelint --if-present
-        if: ${{ env.HAS_STYLES_FILES == '1' }}
+        if: env.HAS_STYLES_FILES == '1'
 
       - name: Run a build command
         uses: dawidd6/action-ansible-playbook@v2
-        if: ${{ github.event.pull_request.merged == true }}
+        if: github.event.pull_request.merged
         with:
           playbook: .ansible/main.yml
           key: ${{ secrets.SSH_PRIVATE_KEY }}
