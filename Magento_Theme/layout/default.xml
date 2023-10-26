@@ -8,10 +8,10 @@
         </referenceBlock>
 
         <referenceContainer name="footer">
-            <block class="Magento\Framework\View\Element\Template" name="custom.footer" template="Magento_Theme::custom_footer.phtml">
+            <block name="custom.footer" template="Magento_Theme::custom_footer.phtml">
                 <arguments>
-                    <argument name="custom_footer_text" xsi:type="string">My first footer text!</argument>
-                    <argument name="new_custom_footer_text" xsi:type="string">My second footer text!</argument>
+                    <argument name="custom_footer_text" translate="true" xsi:type="string">My first footer text!</argument>
+                    <argument name="new_custom_footer_text" translate="true" xsi:type="string">My second footer text!</argument>
                 </arguments>
             </block>
         </referenceContainer>
