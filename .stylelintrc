@@ -2,7 +2,8 @@
     "extends": ["stylelint-config-standard"],
     "customSyntax": "postcss-less",
     "rules": {
-        "import-notation": "both",
+        "string-quotes": null,
+        "import-notation": null,
         "comment-empty-line-before": null,
         "unit-allowed-list": [
             "px",
