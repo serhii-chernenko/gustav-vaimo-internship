@@ -1,0 +1,11 @@
+<?php
+/**
+ * @var Magento\Framework\View\Element\Template $block
+ * @var Magento\Framework\Escaper $escaper
+ */
+?>
+
+<div>
+    <h2><?= $escaper->escapeHtml($block->getData('custom_footer_text')); ?></h2>
+    <p> <?= $escaper->escapeHtml($block->getData('new_custom_footer_text')); ?> </p>
+</div>
