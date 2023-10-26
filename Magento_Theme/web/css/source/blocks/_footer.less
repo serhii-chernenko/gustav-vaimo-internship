@@ -1,0 +1,20 @@
+//& when (@media-common = true) {
+//    .footer {
+//        background-color: lightsteelblue;
+//    }
+//
+//}
+
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .footer {
+        background-color: deepskyblue;
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .footer {
+        background-color: @new-awesome-orange-color;
+    }
+}
+
