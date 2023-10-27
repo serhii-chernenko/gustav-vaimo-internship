@@ -1,3 +1,17 @@
-.header {
-    background-color: @new-awesome-green-color;
+//
+//  Theme variables
+//  _____________________________________________
+
+@header-icons-color: white;
+@header-icons-color-hover: @color-orange-red4;
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .header {
+        background-color: @color-new-awesome-green;
+    }
 }
+
