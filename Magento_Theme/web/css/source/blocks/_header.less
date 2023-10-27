@@ -15,3 +15,22 @@
     }
 }
 
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .page-header .header.panel {
+        max-width: none;
+    }
+
+    .header.content {
+        max-width: none;
+    }
+
+    .navigation {
+        margin-left: 0;
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .section-item-title {
+        background-color: @color-new-awesome-green;
+    }
+}
