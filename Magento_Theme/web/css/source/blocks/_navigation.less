@@ -1,0 +1,20 @@
+//
+//  Common
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    @navigation__background: white;
+
+    .header li {
+        background-color: @secondary__color__light;
+        color: @color-gray34;
+    }
+
+    .switcher-currency, .switcher-currency a {
+        color: @color-gray34;
+    }
+
+    .switcher-currency a:hover {
+        color: @color-orange-red4;
+    }
+}
