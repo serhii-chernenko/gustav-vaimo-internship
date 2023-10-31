@@ -1,5 +1,7 @@
+
+
 //
-//  Common
+//  Mobile
 //  _____________________________________________
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
@@ -15,6 +17,26 @@
     }
 
     .switcher-currency a:hover {
-        color: @color-orange-red4;
+        color: @color-vaimo-yellow;
+    }
+
+    .nav-sections-item-title.active a {
+        color: @color-vaimo-yellow;
+    }
+}
+
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .switcher-option a {
+        color: #333;
+    }
+
+    .switcher-option a:hover {
+        color: white;
+        background-color: @color-vaimo-yellow;
     }
 }
