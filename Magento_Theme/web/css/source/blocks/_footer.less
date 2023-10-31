@@ -33,10 +33,6 @@
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
     .footer {
-        .footer.content {
-            max-width: none;
-        }
-
         .block.newsletter input {
             border-radius: 3px;
         }
@@ -46,6 +42,10 @@
             padding: 8px 15px;
             border-left: 1px solid #333;
         }
+    }
+
+    footer .footer.content {
+        max-width: none;
     }
 }
 

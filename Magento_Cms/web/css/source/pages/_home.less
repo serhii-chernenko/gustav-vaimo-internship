@@ -1,0 +1,38 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .cms-home {
+        .row-full-width-inner {
+            height: 50vh;
+        }
+
+        .column.main {
+            padding-bottom: 0;
+        }
+
+        .footer.content {
+            margin-top: 0;
+            border-top: none;
+        }
+    }
+}
+
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .page-header {
+        border-bottom: none;
+        margin-bottom: 0;
+
+        .header.content {
+            position: unset;
+        }
+    }
+
+}
+
