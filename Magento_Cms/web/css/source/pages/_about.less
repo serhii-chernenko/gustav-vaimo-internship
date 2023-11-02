@@ -1,0 +1,58 @@
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .cms-about-us {
+         .pagebuilder-column-line {
+             gap: @indent__m;
+         }
+        }
+    }
+
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+    .cms-about-us {
+        .pagebuilder-column.about-us-image-container {
+            width: 30% !important;
+        }
+    }
+}
+
+
+//.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+//    .cms-about-us {
+//        .pagebuilder-column {
+//            align-items: center;
+//            margin-bottom: @indent__s;
+//
+//            .about-us-image {
+//                width: 60%;
+//            }
+//        }
+//
+//    }
+//}
+//
+//
+////
+////  Desktop
+////  _____________________________________________
+//
+//.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+//    .cms-about-us {
+//        .pagebuilder-column-line {
+//            //display: flex;
+//            //justify-content: space-around;
+//            gap: @indent__m;
+//
+//            .about-us-image-container {
+//                width: 40% !important;
+//            }
+//
+//            .about-us-text-container {
+//                width: 40% !important;
+//            }
+//        }
+//    }
+//}
