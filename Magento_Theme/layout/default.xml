@@ -8,11 +8,7 @@
         </referenceBlock>
 
         <referenceContainer name="footer">
-            <block name="custom.footer" template="Magento_Theme::custom_footer.phtml">
-                <arguments>
-                    <argument name="custom_footer_text" translate="true" xsi:type="string">My first footer text!</argument>
-                    <argument name="new_custom_footer_text" translate="true" xsi:type="string">My second footer text!</argument>
-                </arguments>
+            <block class="Vaimo\CustomFooter\Block\FooterInfo" name="custom.footer" template="Magento_Theme::custom_footer.phtml">
             </block>
         </referenceContainer>
     </body>
