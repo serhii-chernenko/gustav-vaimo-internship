@@ -5,7 +5,7 @@
 //  _____________________________________________
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
-    @navigation__background: white;
+    @navigation__background: @color-general-white;
 
     .header li {
         background-color: @secondary__color__light;
@@ -27,10 +27,6 @@
     .nav-sections-item-title.active a {
         color: @color-vaimo-yellow;
     }
-
-    .navigation .level0.active > .level-top {
-        border-color: @color-vaimo-yellow !important;
-    }
 }
 
 
@@ -44,18 +40,12 @@
     }
 
     .switcher-option a:hover {
-        color: white;
+        color: @color-general-white;
         background-color: @color-vaimo-yellow;
     }
 
     .navigation .level0 .submenu a:hover {
         background-color: @color-vaimo-yellow;
-        color: white;
-    }
-
-    .navigation .level0.active > .level-top,
-    .navigation .level0.has-active > .level-top,
-    .navigation .level0 .submenu .active > a {
-        border-color: @color-vaimo-yellow;
+        color: @color-general-white;
     }
 }

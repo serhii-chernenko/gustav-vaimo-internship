@@ -6,5 +6,5 @@
 ?>
 
 <div>
-   <p class="current-date-text">Today's date: <?= $escaper->escapeHtml($block->getCurrentDate()) ?></p>
+    <p class="current-date-text"><?= $escaper->escapeHtml(__("Today's date: %1", $block->getCurrentDate())); ?></p>
 </div>
