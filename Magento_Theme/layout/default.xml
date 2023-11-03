@@ -11,15 +11,5 @@
             <block class="Vaimo\CustomFooter\Block\FooterInfo" name="custom.footer" template="Magento_Theme::custom_footer.phtml">
             </block>
         </referenceContainer>
-
-        <referenceBlock name="footer_links">
-            <block class="Magento\Framework\View\Element\Html\Link" name="footer.about.us.link">
-                <arguments>
-                    <argument name="label" xsi:type="string">About Us</argument>
-                    <argument name="path" xsi:type="string">about-us</argument>
-                    <argument name="class" xsi:type="string">nav item current</argument>
-                </arguments>
-            </block>
-        </referenceBlock>
     </body>
 </page>
