@@ -1,0 +1,46 @@
+// /**
+//  * Copyright © Vaimo Group. All rights reserved.
+//  * See LICENSE_VAIMO.txt for license details.
+//  */
+
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .checkout-onepage-success {
+        .page-main {
+            background-image: url('@{baseDir}images/success-mobile.jpeg');
+            min-height: 40vh;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .checkout-onepage-success {
+        .page-main {
+            background-image: url('@{baseDir}images/success-desktop.jpeg');
+            min-height: 80vh;
+            max-width: none;
+
+            .checkout-success {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    }
+}
