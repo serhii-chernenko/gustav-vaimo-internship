@@ -7,9 +7,5 @@
             </arguments>
         </referenceBlock>
 
-        <referenceContainer name="footer">
-            <block class="Vaimo\CustomFooter\Block\FooterInfo" name="custom.footer" template="Magento_Theme::custom_footer.phtml">
-            </block>
-        </referenceContainer>
     </body>
 </page>
