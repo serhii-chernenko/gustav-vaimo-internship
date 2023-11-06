@@ -1,0 +1,37 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .checkout-onepage-success {
+        .page-main {
+            background: url('@{baseDir}images/success-mobile.jpeg') no-repeat center / cover;
+            min-height: 41vh;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .checkout-onepage-success {
+        .page-main {
+            background-image: url('@{baseDir}images/success-desktop.jpeg');
+            min-height: 80vh;
+            max-width: none;
+
+            .checkout-success {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    }
+}
