@@ -10,9 +10,14 @@
                 <argument name="logo_width" xsi:type="number">185</argument>
             </arguments>
         </referenceBlock>
-        <referenceContainer name="footer">
-        <block class="Magento\Theme\Block\Html\Header\Logo" name="logo-footer" template="Magento_Theme::footer-logo.phtml" before="-" />
-        </referenceContainer>
 
+        <referenceContainer name="footer">
+            <block class="Magento\Theme\Block\Html\Header\Logo" name="logo-white">
+                <arguments>
+                    <argument name="logo_width" xsi:type="number">185</argument>
+                    <argument name="logo_file" xsi:type="string">images/logo-white.svg</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
     </body>
 </page>
