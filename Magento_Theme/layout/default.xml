@@ -4,6 +4,24 @@
         <!-- Remove -->
         <referenceBlock name="copyright" remove="true" />
         <referenceBlock name="report.bugs" remove="true" />
+        <referenceBlock name="advanced-search-link" remove="true" />
+        <referenceBlock name="header.panel" remove="true" />
+
+        <!-- Move -->
+        <move element="minicart" destination="custom.header.container" after="wish-list-link" />
+        <move element="wish-list-link" destination="custom.header.container" after="my-account-link" />
+        <move element="my-account-link" destination="custom.header.container" before="wish-list-link"  />
+        <move element="top.search" destination="header-wrapper" before="-" />
+
+        <referenceContainer name="header-wrapper">
+            <container name="custom.header.container" label="custom header container" htmlTag="div" htmlClass="custom-header-container" />
+        </referenceContainer>
+
+        <referenceBlock name="my-account-link">
+            <arguments>
+                <argument name="class" xsi:type="string">link-my-account</argument>
+            </arguments>
+        </referenceBlock>
 
         <referenceBlock name="logo">
             <arguments>
