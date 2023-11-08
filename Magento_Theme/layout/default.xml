@@ -2,10 +2,9 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <!-- Remove -->
-
-        <!-- Advance search link -->
+        <referenceBlock name="copyright" remove="true" />
+        <referenceBlock name="report.bugs" remove="true" />
         <referenceBlock name="advanced-search-link" remove="true" />
-        <!--Whole link panel-->
         <referenceBlock name="header.panel" remove="true" />
 
         <!-- Move -->
@@ -30,5 +29,13 @@
             </arguments>
         </referenceBlock>
 
+        <referenceContainer name="footer">
+            <block class="Magento\Theme\Block\Html\Header\Logo" name="logo-white">
+                <arguments>
+                    <argument name="logo_width" xsi:type="number">185</argument>
+                    <argument name="logo_file" xsi:type="string">images/logo-white.svg</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
     </body>
 </page>
