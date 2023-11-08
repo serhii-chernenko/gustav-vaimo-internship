@@ -1,11 +1,18 @@
 <?xml version="1.0"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
+        <!-- Remove -->
+        <referenceBlock name="copyright" remove="true" />
+        <referenceBlock name="report.bugs" remove="true" />
+
         <referenceBlock name="logo">
             <arguments>
                 <argument name="logo_width" xsi:type="number">185</argument>
             </arguments>
         </referenceBlock>
+        <referenceContainer name="footer">
+        <block class="Magento\Theme\Block\Html\Header\Logo" name="logo-footer" template="Magento_Theme::footer-logo.phtml" before="-" />
+        </referenceContainer>
 
     </body>
 </page>
