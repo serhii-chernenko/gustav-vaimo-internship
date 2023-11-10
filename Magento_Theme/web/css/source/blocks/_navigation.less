@@ -7,9 +7,33 @@
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
     @navigation__background: @color-general-white;
 
+    .header.content {
+        padding: 15px 15px 3px;
+    }
+
     .header li {
-        background-color: @secondary__color__light;
         color: @color-gray34;
+    }
+
+    .custom-header-container {
+        display: none;
+    }
+
+    .block-search .control {
+        border-top: unset;
+        clear: unset;
+    }
+
+    .nav-toggle::before {
+        font-size: 32px;
+    }
+
+    .block-search .label::before {
+        margin-top: 8px;
+    }
+
+    .logo img {
+        margin-left: 6px;
     }
 
     .switcher-currency, .switcher-currency a {

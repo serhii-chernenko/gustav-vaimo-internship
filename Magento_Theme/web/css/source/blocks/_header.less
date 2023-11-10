@@ -21,9 +21,10 @@
 }
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
-    .page-header .header.panel {
-        max-width: none;
-    }
+    .page-header {
+        .page-header .header.panel {
+            max-width: none;
+        }
 
     .header.content {
         max-width: none;
@@ -38,50 +39,52 @@
         }
     }
 
-    .logo {
-        margin: 0 auto 25px;
-        float: unset;
-    }
 
-    .block-search {
-        float: left;
-    }
+        .logo {
+            margin: 0 auto 25px;
+            float: unset;
+        }
 
-    .custom-header-container {
-        list-style: none;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        align-items: center;
-        gap: 15px;
-        max-width: 35%;
-        float: right;
-        padding-bottom: 25px;
-        font-size: 16px;
+        .block-search {
+            float: left;
+        }
 
-        > li {
-            .lib-icon-font(
-                @_icon-font-content: @icon-account;
-                @_icon-font-size: 34px;
-            );
+        .custom-header-container {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 15px;
+            min-width: 340px;
+            max-width: 35%;
+            float: right;
+            padding-bottom: 25px;
+            font-size: 16px;
 
-            .link-my-account {
-                padding-left: 6px;
+            > li {
+                .lib-icon-font(
+                    @_icon-font-content: @icon-account;
+                    @_icon-font-size: 34px;
+                );
+
+                .link-my-account {
+                    padding-left: 6px;
+                }
+            }
+
+            .link.wishlist {
+                .lib-icon-font(
+                    @_icon-font-content: @icon-wishlist-full;
+                    @_icon-font-size: 48px;
+                );
+            }
+
+            .minicart-wrapper {
+                margin-left: 0;
             }
         }
-
-        .link.wishlist {
-            .lib-icon-font(
-                @_icon-font-content: @icon-wishlist-full;
-                @_icon-font-size: 48px;
-            );
-        }
-
-        .minicart-wrapper {
-            margin-left: 0;
-        }
     }
-
 
     .navigation {
         margin-left: 0;
@@ -96,4 +99,11 @@
             color: @color-general-white;
         }
     }
+
+    .block.block-search {
+        margin-top: 0;
+    }
 }
+
+
+
