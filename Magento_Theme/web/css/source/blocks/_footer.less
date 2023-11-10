@@ -7,6 +7,10 @@
         background-color: @color-new-awesome-green;
         color: @color-general-white;
 
+        a {
+            color: @color-general-white;
+        }
+
         .current-date-text {
             margin-top: @indent__s;
             font-size: @font-size__s;
@@ -42,6 +46,10 @@
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
     .footer {
+        a:hover {
+            color: @color-vaimo-yellow;
+        }
+
         .block.newsletter input {
             border-radius: 3px;
         }

@@ -13,6 +13,10 @@
     .header {
         background-color: @color-new-awesome-green;
         color: @color-general-white;
+
+        a {
+            color: @color-general-white;
+        }
     }
 }
 
@@ -28,6 +32,10 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+
+        a:hover {
+            color: @color-vaimo-yellow;
+        }
     }
 
     .logo {
@@ -83,5 +91,9 @@
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
     .section-item-title {
         background-color: @color-new-awesome-green;
+
+        .nav-sections-item-switch {
+            color: @color-general-white;
+        }
     }
 }
