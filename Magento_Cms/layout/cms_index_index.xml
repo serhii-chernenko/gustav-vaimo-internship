@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <container name="home.page.title.container" htmlTag="div" htmlClass="home-page-title-container">
+                <block name="my.perfect.block" template="Magento_Theme::home_page_title.phtml" >
+                    <container name="my.child.container" htmlTag="div" htmlClass="home-page-title-container_two">
+                    <block name="my.perfect.child.block" template="Magento_Theme::home_page_title_two.phtml">
+                        <arguments>
+                            <argument name="my_nice_text" xsi:type="string">My second title!</argument>
+                        </arguments>
+                    </block>
+                    <block name="my.perfect.child.block.two" template="Magento_Theme::home_page_title_three.phtml" />
+                    </container>
+                </block>
+            </container>
+        </referenceContainer>
+    </body>
+</page>

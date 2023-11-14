@@ -1,0 +1,7 @@
+<?php
+/** @var \Magento\Framework\View\Element\Template $block */
+/** @var \Magento\Framework\Escaper $escaper */
+
+$myNiceText = $block->getData('my_nice_text');
+echo $escaper->escapeHtml(__($myNiceText));
+
