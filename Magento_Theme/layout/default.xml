@@ -25,6 +25,7 @@
 
         <referenceBlock name="logo">
             <arguments>
+                <argument name="logo_file" xsi:type="string">images/logo-white.svg</argument>
                 <argument name="logo_width" xsi:type="number">185</argument>
             </arguments>
         </referenceBlock>
