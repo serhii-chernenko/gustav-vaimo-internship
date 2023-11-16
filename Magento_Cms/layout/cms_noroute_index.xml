@@ -1,0 +1,14 @@
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+
+        <!-- Remove -->
+        <referenceContainer name="header.container" remove="true" />
+        <referenceContainer name="navigation.sections" remove="true" />
+        <referenceContainer name="footer" remove="true" />
+
+
+        <referenceContainer name="content">
+            <block class="Magento\Framework\View\Element\Template" name="no-route" template="Magento_Theme::error/404.phtml"/>
+        </referenceContainer>
+    </body>
+</page>
