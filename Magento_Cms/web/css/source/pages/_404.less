@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css?family=Dosis:300,400,700,800';
+
 
 //
 //  Common
@@ -6,21 +6,22 @@
 
 & when (@media-common = true) {
     .cms-no-route {
-        background: #1d2d44ff;
+        background: #1d2d44;
         color: @color-general-white;
-        font-family: Dosis, sans-serif;
+        font-family: @font-family__dosis;
 
         h1 {
             color: @color-general-white;
-            margin: 35px 0 15px;
-            font-size: 55px;
+            margin: @indent__l 0 @indent__s;
+            font-size: @font-size__custom-title;
             font-weight: @font-weight__extrabold;
         }
 
         p {
-            font-size: 20px;
-            padding: 0 10px;
-            margin-bottom: 45px;
+            font-size: @font-size__custom-paragraph;
+            padding: 0 @indent__s;
+            margin-bottom: @indent__xl;
+            color: @color-general-white;
 
             .no-route-space-word {
                 text-decoration: line-through @color-vaimo-yellow;
@@ -32,12 +33,12 @@
             flex-direction: row !important;
             justify-content: flex-end !important;
             position: absolute;
-            width: 100% !important;
+            width: 90% !important;
 
             .no-route-astronaut-image {
                 width: 50px;
                 position: relative;
-                margin-right: 15px;
+                margin-right: @indent__s;
 
                 img {
                     animation: spin 4.5s infinite linear;
@@ -66,7 +67,21 @@
             border: 1px solid @color-general-white;
             color: @color-general-white;
             cursor: pointer;
-            font-family: Dosis, sans-serif;
+            font-family: @font-family__dosis;
+        }
+    }
+
+    .no-route-planet-image .pagebuilder-mobile-hidden {
+        animation: hover 2s infinite ease-in-out alternate;
+    }
+
+    @keyframes hover {
+        0% {
+            transform: translateY(3px);
+        }
+
+        100% {
+            transform: translateY(-3px);
         }
     }
 }
@@ -86,7 +101,7 @@
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
     .cms-no-route {
         h1 {
-            font-size: 75px;
+            font-size: @font-size__custom-title + 20px;
         }
 
         .no-route-astronaut-image-container {

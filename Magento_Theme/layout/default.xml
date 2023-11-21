@@ -1,15 +1,11 @@
 <?xml version="1.0"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
-    <head>
-        <script src="js/custom-script.js" defer="defer" />
-    </head>
     <body>
         <!-- Remove -->
         <referenceBlock name="copyright" remove="true" />
         <referenceBlock name="report.bugs" remove="true" />
         <referenceBlock name="advanced-search-link" remove="true" />
         <referenceBlock name="header.panel" remove="true" />
-        <referenceContainer name="div.sidebar.additional" remove="true" />
 
         <!-- Move -->
         <move element="minicart" destination="custom.header.container" after="wish-list-link" />
