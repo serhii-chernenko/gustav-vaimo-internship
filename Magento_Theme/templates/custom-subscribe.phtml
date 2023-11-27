@@ -1,0 +1,31 @@
+<?php
+/** @var \Magento\Framework\View\Element\Template $block */
+/** @var \Magento\Framework\Escaper $escaper */
+?>
+
+<form class="form subscribe modal__form"
+      novalidate
+      action="<?= $escaper->escapeUrl($block->getFormActionUrl()) ?>"
+      method="post"
+      data-mage-init='{"validation": {"errorClass": "mage-error"}}'
+      id="newsletter-validate-detail">
+    <div class="field newsletter modal__input-group">
+        <div class="control">
+            <label for="newsletter">
+                <input name="email" type="email" id="subscribe-field" class="modal__input"
+                       placeholder="<?= $escaper->escapeHtml(__('Your Email Address')) ?>"
+                       data-mage-init='{"mage/trim-input":{}}'
+                       data-validate="{required:true, 'validate-email':true}"
+                />
+            </label>
+        </div>
+    </div>
+    <div class="actions">
+        <button class="action subscribe primary modal__button"
+                title="<?= $escaper->escapeHtmlAttr(__('JOIN')) ?>"
+                type="submit"
+                aria-label="Subscribe">
+            <span><?= $escaper->escapeHtml(__('JOIN')) ?></span>
+        </button>
+    </div>
+</form>

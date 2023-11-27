@@ -29,6 +29,12 @@
             </arguments>
         </referenceBlock>
 
+        <referenceContainer name="before.body.end">
+            <block class="Magento\Framework\View\Element\Template" name="custom.modal" template="Magento_Theme::modal.phtml">
+                <block class="Magento\Newsletter\Block\Subscribe" name="custom.modal.newsletter" template="Magento_Theme::custom-subscribe.phtml"/>
+            </block>
+        </referenceContainer>
+
         <referenceContainer name="footer">
             <block class="Magento\Theme\Block\Html\Header\Logo" name="logo-white">
                 <arguments>
@@ -46,5 +52,7 @@
                 </arguments>
             </block>
         </referenceContainer>
+
+
     </body>
 </page>
