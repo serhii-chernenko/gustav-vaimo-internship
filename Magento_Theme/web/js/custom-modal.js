@@ -26,10 +26,8 @@ define(['jquery', 'jquery-ui-modules/widget', 'mage/cookies'], function ($) {
       if (this.isValidEmail(email)) {
         this.closeModal();
         newsletterForm.off('submit').on('submit', function () {
-          return true; // Låt standard submit-händelsen inträffa
+          return true;
         });
-      } else {
-        console.log('Invalid email address');
       }
     },
 
