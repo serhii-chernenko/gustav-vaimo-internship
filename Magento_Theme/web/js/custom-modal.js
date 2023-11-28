@@ -18,25 +18,8 @@ define(['jquery', 'jquery-ui-modules/widget', 'mage/cookies'], function ($) {
       });
     },
 
-    submitForm: function (e) {
-      e.preventDefault();
-      let newsletterForm = this.element.find('.modal__form');
-      let emailInput = newsletterForm.find('input[type="email"]');
-
-      let email = emailInput.val();
-
-      if (this.isValidEmail(email)) {
-        this.closeModal();
-        newsletterForm.off('submit').on('submit', function () {
-          return true;
-        });
-      }
-    },
-
-    isValidEmail: function (email) {
-      let re = /\S+@\S+\.\S+/;
-
-      return re.test(email);
+    submitForm: function () {
+      this.sendModalCookie();
     },
 
     sendModalCookie: function () {
