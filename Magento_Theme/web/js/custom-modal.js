@@ -3,11 +3,13 @@ define(['jquery', 'jquery-ui-modules/widget', 'mage/cookies'], function ($) {
     options: {
       modalOpenClass: 'modal',
       modalNotOpenClass: 'not-open-modal',
+      modalShadowClass: 'modal-shadow',
     },
 
     _create: function () {
       if (!$.mage.cookies.get('modalClosed')) {
         this.element.css('display', 'block');
+        this.addModalShadow();
       }
       this._on({
         'click #close-modal-icon': this.closeModal,
@@ -43,6 +45,10 @@ define(['jquery', 'jquery-ui-modules/widget', 'mage/cookies'], function ($) {
           lifetime: 60 * 60 * 24 * 7,
         });
       }
+    },
+
+    addModalShadow: function () {
+      this.element.addClass(this.options.modalShadowClass);
     },
 
     closeModal: function () {
