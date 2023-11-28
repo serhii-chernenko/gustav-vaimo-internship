@@ -52,8 +52,8 @@ define(['jquery', 'jquery-ui-modules/widget', 'mage/cookies'], function ($) {
     },
 
     closeModal: function () {
-      this.element.removeClass(this.options.modalOpenClass);
       this.sendModalCookie();
+      this.element.css('display', 'none');
     },
   });
 
