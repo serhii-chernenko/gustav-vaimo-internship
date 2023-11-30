@@ -46,7 +46,7 @@
         }
 
         &__input-group {
-            border-bottom: 1px solid #bcbcbc;
+            border-bottom: 1px solid @color-modal-input-grey;
             padding-bottom: @indent__s;
             margin-bottom: @indent__s;
         }
@@ -58,7 +58,7 @@
 
             &::placeholder {
                 font-size: 20px;
-                color: #bcbcbc !important;
+                color: @color-modal-input-grey !important;
             }
         }
 
@@ -70,11 +70,13 @@
             width: 100%;
             margin: @indent__s 0 @indent__l 0;
             padding: @indent__m 0 !important;
-            font-size: @font-size__l !important;
+            font-weight: @font-weight__semibold !important;
             border-radius: 4px !important;
-            background-color: #414c56 !important;
+            background-color: @color-modal-button-grey !important;
             color: white !important;
             transition: all 0.15s ease-in-out;
+            text-transform: uppercase;
+            .lib-font-size(@font-size__l) !important;
 
             &:hover {
                 background-color: @color-vaimo-yellow !important;
@@ -106,10 +108,6 @@
 
         &__input-group {
             width: 100%;
-        }
-
-        &__button {
-            font-size: @font-size__s !important;
         }
     }
 }
@@ -151,10 +149,12 @@
         &__button {
             margin: 0 0 0 10px;
             padding: 14px 20px !important;
+            .lib-font-size(@font-size__s) !important;
         }
 
         &__actions {
             display: unset;
+            text-transform: uppercase;
         }
 
         &__close-btn {

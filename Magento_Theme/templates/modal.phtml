@@ -3,20 +3,20 @@
 /** @var \Magento\Framework\Escaper $escaper */
 ?>
 
-<div id="my-modal" class="modal">
+<div class="modal js-my-modal">
     <span id="close-modal-icon" class="icon-arrow-down modal__close-icon"></span>
     <div class="modal__content">
         <div class="modal__image">
-           <?= $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('modal-image-block')->toHtml(); ?>
+            <?= $block->getChildHtml('cms.modal.image.block') ?>
         </div>
         <div class="modal__info">
-            <h2 class="modal__title"> Join the GlobeWest Family</h2>
-            <p class="modal__text">Subscribe to our upcoming trends and directions, product news, interviews and home tours and special offers from our team.</p>
+            <h2 class="modal__title"><?= $escaper->escapeHtml('Join the Vaimo Family') ?></h2>
+            <p class="modal__text"><?= $escaper->escapeHtml('Subscribe to our upcoming trends and directions, product news, interviews and home tours and special offers from our team.') ?> </p>
                 <div class="modal__form-group">
                     <?= $block->getChildHtml('custom.modal.newsletter'); ?>
                 </div>
             <div class="modal__actions">
-                <span class="modal__close-btn">NO THANKS, CLOSE</span>
+                <span class="modal__close-btn"><?= $escaper->escapeHtml('No Thanks, Close') ?></span>
             </div>
         </div>
     </div>
@@ -24,7 +24,7 @@
 
 <script type="text/x-magento-init">
     {
-        "#my-modal": {
+        ".js-my-modal": {
             "Magento_Theme/js/custom-modal": {}
         }
     }

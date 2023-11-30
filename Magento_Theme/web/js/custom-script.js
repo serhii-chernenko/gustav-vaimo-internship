@@ -1,18 +1,15 @@
-let noRouteParagraph = document.querySelector('p');
+const noRouteParagraphParentRow = document.querySelector('.no-route-page-text');
+const noRouteParagraph = noRouteParagraphParentRow.querySelector('p');
 
-let noRouteText = noRouteParagraph.innerHTML;
+noRouteParagraph.innerHTML = noRouteParagraph.innerHTML.replace(
+  /(SPACE)/,
+  '<span class="no-route-space-word">$1</span>'
+);
 
-let noRouteTextArray = noRouteText.split(' ');
-
-if (noRouteTextArray.length >= 3) {
-  let spaceText = noRouteTextArray[2];
-
-  if (spaceText === 'SPACE') {
-    let newNoRouteText = noRouteText.replace(
-      'SPACE',
-      "<span class='no-route-space-word'>SPACE</span>"
-    );
-
-    noRouteParagraph.innerHTML = newNoRouteText;
-  }
-}
+define(['jquery'], $ => {
+  return () => {
+    $('.no-route-page-title').click(function () {
+      $(this).hide();
+    });
+  };
+});

@@ -4,39 +4,38 @@ define(['jquery', 'jquery-ui-modules/widget', 'mage/cookies'], function ($) {
       modalOpenClass: 'modal',
       modalNotOpenClass: 'not-open-modal',
       modalShadowClass: 'modal-shadow',
+      modalCookie: 'modalClosed',
     },
 
-    _create: function () {
-      if (!$.mage.cookies.get('modalClosed')) {
-        this.element.css('display', 'block');
+    _create() {
+      if (!$.mage.cookies.get(this.options.modalCookie)) {
+        this.element.show();
         this.addModalShadow();
+        $('.modal__button').attr('title', 'JOIN');
       }
       this._on({
-        'click #close-modal-icon': this.closeModal,
-        'click .modal__close-btn': this.closeModal,
-        'submit .modal__form': this.submitForm,
+        'click #close-modal-icon': this.closeModal.bind(this),
+        'click .modal__close-btn': this.closeModal.bind(this),
+        'submit .modal__form': this.sendModalCookie.bind(this),
       });
     },
 
-    submitForm: function () {
-      this.sendModalCookie();
-    },
-
-    sendModalCookie: function () {
-      if (!$.mage.cookies.get('modalClosed')) {
-        $.mage.cookies.set('modalClosed', true, {
-          lifetime: 60 * 60 * 24 * 7,
-        });
+    sendModalCookie() {
+      if ($.mage.cookies.get(this.options.modalCookie)) {
+        return this;
       }
+      $.mage.cookies.set(this.options.modalCookie, true, {
+        lifetime: 60 * 60 * 24 * 7,
+      });
     },
 
-    addModalShadow: function () {
+    addModalShadow() {
       this.element.addClass(this.options.modalShadowClass);
     },
 
-    closeModal: function () {
+    closeModal() {
       this.sendModalCookie();
-      this.element.css('display', 'none');
+      this.element.hide();
     },
   });
 

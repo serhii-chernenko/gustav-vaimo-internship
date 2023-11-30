@@ -13,7 +13,7 @@
         <div class="control">
             <label for="newsletter">
                 <input name="email" type="email" id="subscribe-field" class="modal__input"
-                       placeholder="<?= $escaper->escapeHtml(__('Your Email Address')) ?>"
+                       placeholder="<?= $escaper->escapeHtmlAttr(__('Your Email Address')) ?>"
                        data-mage-init='{"mage/trim-input":{}}'
                        data-validate="{required:true, 'validate-email':true}"
                 />
@@ -22,10 +22,10 @@
     </div>
     <div class="actions">
         <button class="action subscribe primary modal__button"
-                title="<?= $escaper->escapeHtmlAttr(__('JOIN')) ?>"
+                title="<?= $escaper->escapeHtmlAttr(__('Join')) ?>"
                 type="submit"
                 aria-label="Subscribe">
-            <span><?= $escaper->escapeHtml(__('JOIN')) ?></span>
+            <span><?= $escaper->escapeHtml(__('Join')) ?></span>
         </button>
     </div>
 </form>
