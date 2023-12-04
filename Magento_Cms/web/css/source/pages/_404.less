@@ -1,0 +1,119 @@
+
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .cms-no-route {
+        background: #1d2d44;
+        color: @color-general-white;
+        font-family: @font-family__dosis;
+
+        h1 {
+            color: @color-general-white;
+            margin: @indent__l 0 @indent__s;
+            font-size: @font-size__custom-title;
+            font-weight: @font-weight__extrabold;
+        }
+
+        p {
+            font-size: @font-size__custom-paragraph;
+            padding: 0 @indent__s;
+            margin-bottom: @indent__xl;
+            color: @color-general-white;
+
+            .no-route-space-word {
+                text-decoration: line-through @color-vaimo-yellow;
+            }
+        }
+
+        .no-route-astronaut-image-container {
+            display: flex !important;
+            flex-direction: row !important;
+            justify-content: flex-end !important;
+            position: absolute;
+            width: 90% !important;
+
+            .no-route-astronaut-image {
+                width: 50px;
+                position: relative;
+                margin-right: @indent__s;
+
+                img {
+                    animation: spin 4.5s infinite linear;
+                }
+            }
+
+            @keyframes spin {
+                0% {
+                    transform: rotateZ(0deg);
+                }
+
+                100% {
+                    transform: rotateZ(360deg);
+                }
+            }
+
+        }
+
+    }
+
+    .no-route-home-button-container {
+        .pagebuilder-button-primary {
+            width: 200px;
+            border-radius: 8px;
+            background: none;
+            border: 1px solid @color-general-white;
+            color: @color-general-white;
+            cursor: pointer;
+            font-family: @font-family__dosis;
+        }
+    }
+
+    .no-route-planet-image .pagebuilder-mobile-hidden {
+        animation: hover 2s infinite ease-in-out alternate;
+    }
+
+    @keyframes hover {
+        0% {
+            transform: translateY(3px);
+        }
+
+        100% {
+            transform: translateY(-3px);
+        }
+    }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__s) {
+    .cms-no-route {
+        .no-route-astronaut-image-container {
+            width: 75% !important;
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .cms-no-route {
+        h1 {
+            font-size: @font-size__custom-title + 20px;
+        }
+
+        .no-route-astronaut-image-container {
+            width: 65% !important;
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
+    .cms-no-route {
+        .no-route-astronaut-image-container {
+            width: 60% !important;
+        }
+    }
+}

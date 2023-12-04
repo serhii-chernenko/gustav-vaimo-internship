@@ -1,0 +1,12 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <!-- Remove -->
+        <referenceContainer name="div.sidebar.additional" remove="true" />
+
+        <referenceContainer name="content">
+            <block name="no.route" template="Magento_Theme::no-route.phtml"/>
+        </referenceContainer>
+    </body>
+</page>
+
+

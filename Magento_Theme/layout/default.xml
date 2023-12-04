@@ -38,5 +38,16 @@
                 </arguments>
             </block>
         </referenceContainer>
+
+        <referenceContainer name="footer_links" >
+            <block class="Magento\Framework\View\Element\Html\Link" name="footer.about.us.link">
+                <arguments>
+                    <argument name="label" xsi:type="string">About Us</argument>
+                    <argument name="path" xsi:type="string">about-us</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+
+
     </body>
 </page>
