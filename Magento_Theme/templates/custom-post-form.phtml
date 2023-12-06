@@ -1,0 +1,17 @@
+<?php
+/** @var \Magento\Framework\View\Element\Template $block */
+/** @var \Magento\Framework\Escaper $escaper */
+?>
+
+<form class="my-custom-form">
+    <input type="text" name="my-custom-field" />
+    <button type="submit">Skicka</button>
+</form>
+
+<script type="text/x-magento-init">
+    {
+        ".my-custom-form": {
+            "Magento_Theme/js/custom-post-form": {}
+        }
+    }
+</script>

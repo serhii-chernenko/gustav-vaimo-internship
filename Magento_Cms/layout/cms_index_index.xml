@@ -11,5 +11,13 @@
                 </block>
             </block>
         </referenceContainer>
+
+        <referenceContainer name="content">
+            <block name="custom.test" template="Magento_Theme::custom-test.phtml" before="-" />
+        </referenceContainer>
+
+        <referenceContainer name="content">
+            <block name="custom.post.form" template="Magento_Theme::custom-post-form.phtml" before="custom-test.phtml" />
+        </referenceContainer>
     </body>
 </page>

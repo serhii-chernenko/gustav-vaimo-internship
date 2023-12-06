@@ -1,0 +1,17 @@
+<div data-bind="scope: 'my.scope'">
+    <!-- ko template: 'Magento_Theme/mytemplate' --><!-- /ko -->
+</div>
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "my.scope": {
+                        "component": "Magento_Theme/js/viewmodel"
+                    }
+                }
+            }
+        }
+    }
+</script>

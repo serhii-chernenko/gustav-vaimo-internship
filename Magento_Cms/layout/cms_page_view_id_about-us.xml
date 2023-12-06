@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block name="custom.post.form" template="Magento_Theme::custom-post-form.phtml" before="-" />
+        </referenceContainer>
+
+        <referenceContainer name="content">
+            <block name="knockout.message" template="Magento_Theme::myknockoutcomponent.phtml" before="-" />
+        </referenceContainer>
+
+        <referenceContainer name="content">
+            <block name="custom.function.mixin" template="Magento_Theme::functions/function-mixin.phtml" before="-" />
+        </referenceContainer>
+
+        <referenceContainer name="content">
+            <block name="custom.object.mixin" template="Magento_Theme::objects/object-mixin.phtml" before="-" />
+        </referenceContainer>
+
+        <referenceContainer name="content">
+            <block name="custom.widget.mixin" template="Magento_Theme::widgets/widget-mixin.phtml" before="-" />
+        </referenceContainer>
+    </body>
+</page>

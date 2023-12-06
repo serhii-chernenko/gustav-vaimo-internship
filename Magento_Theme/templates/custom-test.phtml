@@ -1,0 +1,24 @@
+<?php
+/** @var \Magento\Framework\View\Element\Template $block */
+/** @var \Magento\Framework\Escaper $escaper */
+?>
+
+<h1 class="js-custom-test">Hello World</h1>
+
+<!--<h1 data-mage-init='{"Magento_Theme/js/custom-test": {}}'>Hello World</h1>-->
+<!---->
+<!--<h1 class="js-custom-test-two">Hello World Two</h1>-->
+
+<script type="text/x-magento-init">
+    {
+    ".js-custom-test": {
+        "Magento_Theme/js/custom-test": {}
+        }
+    }
+</script>
+
+<!--<script>-->
+<!--    require(['jquery', 'Magento_Theme/js/custom-test'], function ($) {-->
+<!--        $('.js-custom-test-two').testWidget();-->
+<!--    })-->
+<!--</script>-->
