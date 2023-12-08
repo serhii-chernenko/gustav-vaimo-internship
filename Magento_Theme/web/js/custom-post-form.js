@@ -11,6 +11,7 @@ define(['jquery', 'mage/mage'], function ($) {
 
     submitForm(e) {
       e.preventDefault();
+      // eslint-disable-next-line no-console
       console.log('Form submitted');
 
       $.ajax({
@@ -19,11 +20,12 @@ define(['jquery', 'mage/mage'], function ($) {
         data: $('.my-custom-form').serializeArray(),
         dataType: 'json',
         success: function (data) {
+          // eslint-disable-next-line no-console
           console.log('Success', data);
         },
 
         error: function (error) {
-          console.log('Error', error);
+          throw new Error('Error: ' + error.message);
         },
       });
     },

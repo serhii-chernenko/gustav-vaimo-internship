@@ -29,14 +29,17 @@ define([
     },
 
     onSuccess(data) {
+      // eslint-disable-next-line no-console
       console.log(data);
     },
 
     onDesktop() {
+      // eslint-disable-next-line no-console
       console.log('desktop');
     },
 
     onMobile() {
+      // eslint-disable-next-line no-console
       console.log('mobile');
     },
   });
