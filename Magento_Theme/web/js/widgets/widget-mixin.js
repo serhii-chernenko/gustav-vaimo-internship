@@ -4,8 +4,10 @@ define(['jquery'], function ($) {
       str1: '4321',
     },
     _heat() {
+      // eslint-disable-next-line no-console
       console.log('log before init');
       this._super();
+      // eslint-disable-next-line no-console
       console.log('log after init');
     },
   };

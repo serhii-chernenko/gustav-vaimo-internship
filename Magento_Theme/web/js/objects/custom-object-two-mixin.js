@@ -15,12 +15,10 @@ define(['jquery'], function ($) {
             $('.js-finland-euro').html(
               `Welcome to ${finland}! Here we use the currency ${euro}.`
             );
-          } else {
-            console.log('Not all data available.');
           }
         })
         .catch(function (error) {
-          console.error('Error fetching data:', error);
+          throw new Error('Error: ' + error.message);
         });
     };
 

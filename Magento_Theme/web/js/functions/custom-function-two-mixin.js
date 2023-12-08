@@ -8,8 +8,7 @@ define(['jquery', 'mage/utils/wrapper'], function ($, wrapper) {
           return data;
         })
         .catch(function (error) {
-          console.error('Error: ', error);
-          throw error;
+          throw new Error('Error: ' + error.message);
         });
       function showData(countryData) {
         if (countryData) {

@@ -15,7 +15,7 @@ define(['jquery', 'jquery-ui-modules/widget'], function ($) {
           return data;
         })
         .fail(function (error) {
-          console.log('Error: ', error);
+          throw new Error('Error: ' + error.message);
         });
     },
   });

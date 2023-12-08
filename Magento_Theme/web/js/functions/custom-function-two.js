@@ -16,8 +16,7 @@ define(['jquery'], function ($) {
         return data;
       })
       .fail(function (error) {
-        console.error('Error: ', error);
-        throw error;
+        throw new Error('Error: ' + error.message);
       });
   };
 });

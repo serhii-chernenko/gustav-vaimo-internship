@@ -8,7 +8,7 @@ define(['jquery'], function ($) {
           this._showStore(data);
         })
         .fail(function (error) {
-          console.log('Error: ', error);
+          throw new Error('Error: ' + error.message);
         });
     },
 

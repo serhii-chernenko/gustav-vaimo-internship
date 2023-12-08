@@ -10,7 +10,9 @@ define(['jquery', 'jquery-ui-modules/widget'], function ($) {
     },
 
     _heat() {
+      // eslint-disable-next-line no-console
       console.log('Original init method');
+      // eslint-disable-next-line no-console
       console.log(this.options);
     },
   });
