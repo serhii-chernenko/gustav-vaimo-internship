@@ -1,9 +1,10 @@
-define(['jquery'], function ($) {
+define(['jquery', 'mage/url'], function ($, urlBuilder) {
   return {
-    BASE_URL: 'https://app.exampleproject.test/rest/all/V1',
+    COUNTRY_URL: '/rest/all/V1/directory/countries/FI',
+    CURRENCY_URL: '/rest/all/V1/directory/currency',
     fetchCountry() {
       return $.ajax({
-        url: `${this.BASE_URL}/directory/countries/FI`,
+        url: urlBuilder.build(this.COUNTRY_URL),
         method: 'GET',
         dataType: 'json',
       })
@@ -16,7 +17,7 @@ define(['jquery'], function ($) {
     },
     fetchCurrency() {
       return $.ajax({
-        url: `${this.BASE_URL}/directory/currency`,
+        url: urlBuilder.build(this.CURRENCY_URL),
         method: 'GET',
         dataType: 'json',
       });

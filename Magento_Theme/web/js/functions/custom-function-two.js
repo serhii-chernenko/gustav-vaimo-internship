@@ -1,11 +1,10 @@
-define(['jquery'], function ($) {
+define(['jquery', 'mage/url'], function ($, urlBuilder) {
   return function () {
-    const DATA_URL =
-      'https://app.exampleproject.test/rest/all/V1/directory/countries/SE';
+    const ACTION_URL = '/rest/all/V1/directory/countries/SE';
 
     function fetchData() {
       return $.ajax({
-        url: DATA_URL,
+        url: urlBuilder.build(ACTION_URL),
         method: 'GET',
         dataType: 'json',
       });

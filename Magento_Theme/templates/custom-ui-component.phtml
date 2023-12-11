@@ -1,0 +1,23 @@
+<?php
+/** @var \Magento\Framework\View\Element\Template $block */
+/** @var \Magento\Framework\Escaper $escaper */
+?>
+
+<div data-bind="scope: 'customComponent'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+        "Magento_Ui/js/core/app": {
+            "components": {
+                "customComponent": {
+                    "component": "Magento_Theme/js/custom-ui-component",
+                    "todos": ["item 1", "item 2", "item 3"]
+                    }
+                }
+            }
+        }
+    }
+</script>
