@@ -1,0 +1,45 @@
+<div data-bind="afterRender: refModal"
+     style="display: none"
+>
+    <h1 data-bind="text: modalTitle"></h1>
+    <form data-bind="
+              submit: submit,
+              afterRender: refForm,
+              mageInit: { 'validation': {} }
+          "
+    >
+        <fieldset class="fieldset">
+            <div class="field required">
+                <label data-bind="i18n: 'Title', attr: { for: fieldId }"
+                       class="label"
+                ></label>
+                <div class="control">
+                    <input type="text"
+                           data-bind="
+                               textInput: title,
+                               attr: { name: fieldId, placeholder: $t('Enter your title') }
+                           "
+                           data-validate="{
+                               'required-entry': true,
+                               'stripped-min-length': 3,
+                               'maxlength': 50
+                           }"
+                    />
+                </div>
+            </div>
+        </fieldset>
+        <div class="actions-toolbar">
+            <div class="primary">
+                <button data-bind="text: ctaTitle, attr: { title: ctaTitle }"
+                        class="action primary"
+                ></button>
+            </div>
+            <div class="secondary">
+                <button type="button"
+                        data-bind="i18n: 'Close', attr: { title: $t('Close') }, click: close"
+                        class="action secondary"
+                ></button>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,10 @@
+<button type="button"
+        data-bind="
+            i18n: 'Add',
+            attr: { title: $t('Add') },
+            click: add
+        "
+></button>
+<ul data-bind="foreach: elems">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+</ul>
