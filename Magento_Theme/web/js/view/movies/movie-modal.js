@@ -85,7 +85,6 @@ define(['uiElement', 'jquery'], (uiElement, $) => {
 
     addMovie(e) {
       e.preventDefault();
-      console.log(this.modalMode);
       const title = $('#title').val();
       const year = $('#year').val();
       const poster = $('#poster').val();
