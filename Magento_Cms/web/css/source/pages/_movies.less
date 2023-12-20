@@ -1,0 +1,143 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+.cms-movies {
+    .movies-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 15px;
+
+        .add-movie-reset-rating-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            margin-bottom: 25px;
+            gap: 25px;
+
+            button:hover,
+            button:active,
+            button:focus {
+                border: none;
+            }
+        }
+
+        .movies-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 35px;
+
+            .movie {
+                text-align: center;
+                max-width: 250px;
+                height: 495px;
+                box-shadow: 1px 0 20px rgba(151, 149, 149, (80%)),
+                0 10px 5px rgba(151, 149, 149,  (10%));
+                border-radius: 8px;
+                overflow: hidden;
+
+                    .poster {
+                        width: 250px;
+                        max-height: 330px;
+                        border-top-left-radius: 8px;
+                        border-top-right-radius: 8px;
+                        transition: all 0.3s ease-in-out;
+
+                        &:hover {
+                            transform: scale(1.1);
+                            margin-bottom: 10px;
+                        }
+                    }
+
+                     .title {
+                        padding: 0 15px;
+                     }
+
+                .year {
+                    font-weight: 600;
+                    font-size: 16px;
+                    margin: 10px 0 19px;
+                }
+
+                .edit-movie-container {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 0 7px;
+
+                    .stars-wrapper {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+
+                        .rating {
+                            margin-bottom: 0;
+                            padding-right: 5px;
+                            font-weight: @font-weight__bold;
+                        }
+
+                        .stars-container {
+                            .star {
+                                cursor: pointer;
+                                color: @color-modal-input-grey;
+                            }
+
+                            .star.active {
+                                color: @color-vaimo-yellow-active;
+                            }
+                        }
+                    }
+
+                    .delete-btn,
+                    .edit-btn {
+                        border-radius: 25px;
+                        width: 35px;
+                        height: 35px;
+                        padding: 0;
+                        margin: 0 1px;
+
+                        .delete-icon {
+                            .lib-icon-font(
+                                @_icon-font-content: @icon-trash;
+                                @_icon-font-size: 28px;
+                            );
+                        }
+
+                        .edit-icon {
+                            .lib-icon-font(
+                                @_icon-font-content: @icon-settings;
+                                @_icon-font-size: 28px;
+                            );
+                        }
+                    }
+                }
+                }
+
+            }
+        }
+
+    }
+}
+
+
+
+//
+//  Mobile
+//  _____________________________________________
+
+    .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
+    .cms-movies {
+        .movies-container {
+            .movies-wrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    }
+}
+

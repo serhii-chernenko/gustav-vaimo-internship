@@ -1,0 +1,59 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .cms-movies {
+        .movie-modal {
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            padding: 25px @indent__s;
+            gap: 25px;
+            width: 80%;
+            z-index: @z-index-2;
+            background-color: @color-general-white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+
+            label {
+                font-size: 16px;
+            }
+
+            &__title-container,
+            &__year-container,
+            &__poster-container {
+                width: 90%;
+            }
+
+            &__btn-container {
+                button:hover,
+                button:active,
+                button:focus {
+                    border: none;
+                }
+            }
+        }
+
+        .modal-shadow {
+            box-shadow: 1px 0 35px rgba(151, 149, 149, (30%)),
+            0 10px 5px rgba(151, 149, 149, (10%));
+        }
+    }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__s) {
+    .cms-movies {
+        .movie-modal {
+            width: 400px;
+        }
+    }
+}

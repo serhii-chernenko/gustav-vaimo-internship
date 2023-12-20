@@ -1,0 +1,18 @@
+<form class="movie-modal modal-shadow">
+       <div class="movie-modal__title-container">
+           <label for="title">Title</label>
+           <input type="text" name="title" id="title" maxlength="50" placeholder="Movie title..." required>
+       </div>
+       <div class="movie-modal__year-container">
+           <label for="year">Year</label>
+           <input type="number" name="year" id="year" min="1900" max="2099" placeholder="1975..." required>
+       </div>
+       <div class="movie-modal__poster-container">
+           <label for="poster">Poster</label>
+           <input type="text" name="poster" id="poster" placeholder="Image src..." required>
+       </div>
+    <div class="movie-modal__btn-container">
+            <button class="movie-modal__btn-cancel" data-bind="click: function(data, event) {closeMovieModal(event)}">Cancel</button>
+            <button class="movie-modal__btn-add" data-bind="click: function(data, event) { modalMode === 'add' ? addMovie(event) : editExistingMovie(event) }"></button>
+    </div>
+</form>

@@ -1,0 +1,17 @@
+<div class="movie">
+    <img class="poster" data-bind="attr: { src: Poster, alt: Title }">
+    <h3 class="title" data-bind="text: Title"></h3>
+    <p class="year" data-bind="text: Year"></p>
+    <div class="edit-movie-container">
+        <div class="stars-wrapper">
+            <p class="rating">Rating: </p>
+        <div class="stars-container" data-bind="foreach: new Array(numStars)">
+            <span class="star" data-bind="css: { active: $parent.Rating >= ($index() + 1) }, click: function() { $parent.setRating($index() + 1); }">&#9733;</span>
+        </div>
+        </div>
+    <div class="btn-container">
+        <button class="edit-btn" data-bind="click: openEditMovieModalButton"><span class="edit-icon"></span></button>
+        <button class="delete-btn" data-bind="click: removeMovie"><span class="delete-icon"></span></button>
+    </div>
+    </div>
+</div>

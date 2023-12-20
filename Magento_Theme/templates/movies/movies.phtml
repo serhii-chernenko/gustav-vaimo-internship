@@ -1,0 +1,32 @@
+<?php
+/** @var \Magento\Framework\View\Element\Template $block */
+/** @var \Magento\Framework\Escaper $escaper */
+/** @var \SecureWeb\ApiKeyManager\ViewModel\ApiKeyViewModel $viewModel */
+?>
+
+
+<?php
+$viewModel = $block->getData('view_model');
+$apiKey = $viewModel->getApiKey();
+?>
+
+<div class="movies-container" data-bind="scope: 'movies'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "movies": {
+                        "component": "Magento_Theme/js/view/movies",
+                        "apiKey": "<?= $apiKey ?>"
+                    }
+                }
+            }
+        }
+    }
+</script>
+
