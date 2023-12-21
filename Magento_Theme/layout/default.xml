@@ -17,6 +17,10 @@
             <container name="custom.header.container" label="custom header container" htmlTag="div" htmlClass="custom-header-container" />
         </referenceContainer>
 
+        <referenceContainer name="content">
+            <block template="Magento_Theme::todo.phtml"/>
+        </referenceContainer>
+
         <referenceBlock name="my-account-link">
             <arguments>
                 <argument name="class" xsi:type="string">link-my-account</argument>

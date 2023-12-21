@@ -1,0 +1,29 @@
+<?php
+/**
+ * @var Magento\Framework\View\Element\Template $block
+ * @var Magento\Framework\Escaper $escaper
+ */
+?>
+<div data-bind="scope: 'todo'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+<div data-bind="scope: 'todo-modal'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "todo": {
+                        "component": "Magento_Theme/js/view/todo"
+                    },
+                    "todo-modal": {
+                        "component": "Magento_Theme/js/view/modal",
+                        "deps": ["todo"]
+                    }
+                }
+            }
+        }
+    }
+</script>
