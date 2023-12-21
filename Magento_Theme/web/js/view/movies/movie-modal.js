@@ -78,7 +78,6 @@ define(['uiElement', 'jquery'], (uiElement, $) => {
           this.parentComponent().getDataFromLocalStorage();
           this.clearInputFields();
           this.closeMovieModal(e);
-          location.reload();
         }
       }
     },

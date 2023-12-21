@@ -67,7 +67,6 @@ define(['uiComponent', 'jquery', 'uiLayout'], function (
         movie.Rating = 0;
       });
       this.sendDataToLocalStorage(this.movieList);
-      location.reload();
     },
 
     openAddMovieModal() {

@@ -34,7 +34,6 @@ define(['uiElement'], uiElement => {
         }
       });
       this.parentComponent().sendDataToLocalStorage(this.movieList);
-      location.reload();
     },
 
     openEditMovieModalButton() {
