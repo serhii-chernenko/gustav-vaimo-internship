@@ -1,0 +1,8 @@
+<div class="add-movie-reset-rating-container">
+    <button class="reset-rating-btn" data-bind="click: resetMovieRatings">Reset Rating</button>
+    <button class="add-movie-btn" data-bind="click: openAddMovieModal">Add Movie</button>
+</div>
+<div class="movies-wrapper" data-bind="foreach: elems">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+
